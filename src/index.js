@@ -2,11 +2,11 @@
 
 module.exports = function check(str, bracketsConfig) {
 
-	var stack = [];
-	var arr = str.split('');
-	var temp = 0;
+	const stack = [];
+	let arr = str.split('');
+	let temp = 0;
 
-	for(var i  = 0; i < arr.length; i++){
+	for(let i  = 0; i < arr.length; i++){
 		if (arr[i - 1] === '|' && arr[i] === '|') {
 			temp = stack.pop();
 			return true;
